@@ -1,0 +1,64 @@
+1. https://projets.lam.fr/projects/lenstool/wiki/WikiStart
+2. http://tdc-www.harvard.edu/software/wcstools/wcstools.readme.html
+3. https://blog.csdn.net/ReticentHuxt/article/details/78047028
+https://guaix.fis.ucm.es/~ncl/howto/howto-cfitsio.html
+4. https://gnu.askapache.com/gsl/
+5. https://github.com/zeromq/cppzmq#build-instructions
+https://github.com/zeromq/libzmq
+cp ../libzmp-master/include/zmq.h ../lenstool-master/include/
+6. https://github.com/npat-efault/ppgplot/blob/master/INSTALL
+cat INSTALL
+
+7../configure --with-wcslib-include-path=/home/leilei/software/wcstools-3.9.7/libwcs --with-wcslib-lib-path=/home/leilei/software/wcstools-3.9.7/libwcs --with-cfitsio-include-path=/home/leilei/software/cfitsio --with-cfitsio-lib-path=/home/leilei/software/cfitsio --with-gsl-include-path=/home/leilei/software/gsl-1.9 --with-gsl-lib-path=/home/leilei/software/gsl-1.9 --with-zmq-include-path=/home/leilei/software/cppzmq-master --with-zmq-lib-path=/home/leilei/software/libzmq-master/lib64 --with-pgplot-include-path=/home/leilei/software/pgplot --with-pgplot-lib-path=/home/leilei/software/pgplot
+
+MacMini:
+7.拷贝CFITSIO library (libcfitsio.a) 到 /usr/lib目录
+sudo cp libcfitsio.a /usr/lib/
+8. 拷贝.h文件(longnam.h、fitsio.h、fitsio2.h、drvrsmem.h)到 /usr/include 目录
+sudo cp longnam.h /usr/include/
+sudo cp fitsio.h /usr/include/
+sudo cp fitsio2.h /usr/include/
+sudo cp drvrsmem.h /usr/include/
+9. Gsl:1.9
+./configure
+make
+sudo make install
+
+libzmq : brew install zeromq
+brew install pkg-config
+
+Cd libzmq
+Mkdir build
+Cd build
+Cmake ..
+Sudo make -j4 install
+
+Cd cppzmq
+Mkdir build
+Cd build
+Cmake ..
+Sudo make -j4 install
+
+Sudo Port install pgplot
+
+10.
+./configure --with-cfitsio-include-path=/opt/local/include/ --with-cfitsio-lib-path=/opt/local/lib/ --with-wcslib-include-path=/Users/leilei/Applications/lenstool/wcstools-3.9.7/libwcs/ --with-wcslib-lib-path=/Users/leilei/Applications/lenstool/wcstools-3.9.7/libwcs/ --with-zmq-include-path=/opt/homebrew/Cellar/cppzmq/4.8.1/include --with-zmq-lib-path=/opt/homebrew/Cellar/zeromq/4.3.4/lib --with-gsl-include-path=/opt/local/include --with-gsl-lib-path=/opt/local/lib --with-pgplot-include-path=/opt/local/include --with-pgplot-lib-path=/opt/local/lib
+
+11. https://www.macports.org/install.php
+Install Macport
+
+12. sudo port install xpa
+
+13. sudo port install ds9
+
+Mac:
+alias lenstool="/Users/leilei/Applications/lenstool/lenstool-master/lenstool"
+alias lens=lenstool
+alias pcl=/Users/leilei/Applications/lenstool/lenstool-master/perl/pcl
+alias pelli=/Users/leilei/Applications/lenstool/lenstool-master/perl/pelli
+
+ sudo port install xpa
+
+alias ds9="/Users/leilei/Applications/ds9.darwinbigsurarm64.8.3rc/ds9"
+
+
